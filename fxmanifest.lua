@@ -7,7 +7,7 @@ author 'uyuyorum {um}'
 version '1.0.0'
 license 'GPL-3.0 license'
 repository 'https://github.com/alp1x/um-idcard-menu'
-description 'UM Identity Card Menu for ox_lib'
+description 'UM Identity Card Menu ox_lib'
 
 shared_scripts {
 	'config.lua',
