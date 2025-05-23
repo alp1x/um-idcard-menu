@@ -9,6 +9,7 @@ Config.MenuCards = {
     {
         title = 'ID Card',
         icon = 'id-card',
+        metaName = 'id',
         args = {
             itemName = 'id_card'
         }
@@ -16,6 +17,7 @@ Config.MenuCards = {
     {
         title = 'Driver License',
         icon = 'car',
+        metaName = 'driver',
         args = {
             itemName = 'driver_license'
         }
