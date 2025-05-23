@@ -5,6 +5,8 @@ Config.NPC = {
     model = 'a_m_m_business_01'
 }
 
+Config.CheckPermissions = true
+
 Config.MenuCards = {
     {
         title = 'ID Card',
