@@ -5,7 +5,7 @@ local identityMenu = {
 }
 
 for i = 1, #Config.MenuCards, 1 do
-  if !Config.CheckPermissions or lib.callback.await('um-idcard-menu:hasPermission', false, Config.Menucards[i].metaName) then
+  if not Config.CheckPermissions or lib.callback.await('um-idcard-menu:hasPermission', false, Config.MenuCards[i].metaName) then
     identityMenu.options[#identityMenu.options + 1] = {
         title = Config.MenuCards[i].title,
         icon = Config.MenuCards[i].icon,
