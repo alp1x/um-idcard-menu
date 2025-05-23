@@ -5,17 +5,19 @@ local identityMenu = {
 }
 
 for i = 1, #Config.MenuCards, 1 do
-  identityMenu.options[#identityMenu.options + 1] = {
-      title = Config.MenuCards[i].title,
-      icon = Config.MenuCards[i].icon,
-      serverEvent = 'um-idcard-npc:server:AddItemtoExport',
-      args = Config.MenuCards[i].args,
-      disabled = false,
-      onSelect = function()
-          identityMenu.options[i].disabled = true
-          lib.registerContext({identityMenu})
-      end,
-  }
+  if !Config.CheckPermissions or lib.callback.await('um-idcard-menu:hasPermission', false, Config.Menucards[i].meta) then
+    identityMenu.options[#identityMenu.options + 1] = {
+        title = Config.MenuCards[i].title,
+        icon = Config.MenuCards[i].icon,
+        serverEvent = 'um-idcard-npc:server:AddItemtoExport',
+        args = Config.MenuCards[i].args,
+        disabled = false,
+        onSelect = function()
+            identityMenu.options[i].disabled = true
+            lib.registerContext({identityMenu})
+        end,
+    }
+  end
 end
 
 lib.registerContext({identityMenu})
