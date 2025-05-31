@@ -5,10 +5,13 @@ Config.NPC = {
     model = 'a_m_m_business_01'
 }
 
+Config.CheckPermissions = true
+
 Config.MenuCards = {
     {
         title = 'ID Card',
         icon = 'id-card',
+        metaName = 'id',
         args = {
             itemName = 'id_card'
         }
@@ -16,6 +19,7 @@ Config.MenuCards = {
     {
         title = 'Driver License',
         icon = 'car',
+        metaName = 'driver',
         args = {
             itemName = 'driver_license'
         }
